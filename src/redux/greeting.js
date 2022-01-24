@@ -12,7 +12,7 @@ export const getGreeting = () => async (dispatch) => {
   data.map((g) => dispatch(fetchGreetings(g.greeting)));
 };
 
-const reducer = (state = [], action) => {
+const greetingReducer = (state = [], action) => {
   switch (action.type) {
     case FETCH_GREETINGS:
       return action.payload;
@@ -22,4 +22,4 @@ const reducer = (state = [], action) => {
   }
 };
 
-export default reducer;
+export default greetingReducer;
